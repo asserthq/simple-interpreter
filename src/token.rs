@@ -6,6 +6,7 @@ pub enum Token {
     OrOp,
     XorOp,
     NotOp,
+    EqOp,
     ConstVal(u8),
     LeftBrace,
     RightBrace
@@ -19,6 +20,7 @@ impl fmt::Display for Token {
             OrOp => "OR".to_string(),
             XorOp => "XOR".to_string(),
             NotOp => "NOT".to_string(),
+            EqOp => "EQ".to_string(),
             ConstVal(val) => format!("{:x}", val),
             LeftBrace => "(".to_string(),
             RightBrace => ")".to_string()
